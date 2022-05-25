@@ -1,0 +1,164 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+body {
+	background: hsl(210, 50%, 95%);
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+h1{
+ text-align: center;
+ color: black;
+}
+
+#converter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 22rem;
+}
+
+main {
+	padding: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.ans{
+	width: 95%;
+	border-bottom: 1px solid gray;
+}
+
+h3{
+	margin-bottom: 1rem;
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+.answer__section{
+	display: flex;
+	width: 10rem;
+}
+.answer {
+	font-size: 1.2rem;
+	min-height: 1rem;
+	color: black;
+}
+
+.form {
+	background: #fff;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 1rem hsla(210, 50%, 75%, 0.5);
+	color: gray;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.form label {
+	font-size: 1.25em;
+}
+
+.form .inputs {
+	display: flex;
+	padding-top: 0.25rem;
+}
+
+.form :is(input, select) {
+	border-radius: 0.125rem;
+	background: none;
+	outline: none;
+	color: black;
+	font-weight: 500;
+	font-size: 1.2rem;
+	padding: 0.25rem 0;
+	margin: 0;
+	border: none;
+	border-bottom: 1px solid gray;
+}
+
+.input-group{
+	display: flex;
+}
+.form select {
+	cursor: pointer;
+}
+
+.form select[name='fromUnit'] {
+	margin-top: 0.5rem;
+}
+
+.inp{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin:0 .3rem;
+	text-align: left;
+	width: 9rem;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	appearance: none;
+}
+
+.form button {
+	border: none;
+	border-radius: 0.5rem;
+	background: #1775d3;
+	outline: none;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.25rem;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	transition: all 0.4s ease;
+	cursor: pointer;
+	width: 100%;
+}
+
+.form button:hover,
+.form button:active {
+	background-color: #fff;
+	color: #1775d3;
+	border: 2px solid #1775d3;
+	transform: translateY(-0.25rem);
+}
+
+#to{
+	display: none;
+}
+
+@media (max-width: 55rem) {
+	body {
+		text-align: center;
+
+		overflow: visible;
+	}
+}
+
+@media (min-width: 55rem) {
+	.form input[name='fromTemperature'] {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-right: none;
+	}
+
+	.form select[name='fromUnit'] {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		margin: 0;
+	}
+}
